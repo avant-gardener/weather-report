@@ -1,5 +1,6 @@
 .input {
     text-align: center;
+    padding-bottom: 4px;
 }
 
 .data {
@@ -7,6 +8,23 @@
 }
 
 body {
+    background-color: azure;
     font-family: Helvetica;
     margin-top: 300px;
+}
+
+.Weather {
+    text-transform: capitalize;
+}
+
+input[type="text"] {
+    font-size: large;
+}
+
+input[type="submit"] {
+    font-size: large;
+}
+
+p {
+    padding: 4px;
 }
