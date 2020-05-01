@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <title>Weather</title>
 </head>
+
 <body>
-    <div class="input">
-        <input name="city" type="text" class="city_name" placeholder="Enter a city">
+
+    <form class="form">
+        <label for="city_name">Enter a city</label>
+        <input name="city" type="text" class="city_name" id="city_name" placeholder="City Name" autocomplete="off">
         <input type="submit" value="Submit" class="button">
-    </div>
-    
-    <div class="data">
+    </form>
+
+    <p class="error" hidden="True">City not found</p>
+    <div id="data" hidden="true">
         <p class="Date">Date</p>
         <p class="Location">Location</p>
         <p class="Temperature">Temperature</p>
@@ -22,4 +29,5 @@
     <script src="app.js"></script>
 
 </body>
+
 </html>

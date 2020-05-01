@@ -1,15 +1,15 @@
-.input {
+.form {
     text-align: center;
     padding-bottom: 4px;
 }
 
-.data {
+#data {
     text-align: center;
 }
 
 body {
     background-color: azure;
-    font-family: Helvetica;
+    font-family: "Roboto", cursive;
     margin-top: 300px;
 }
 
@@ -18,13 +18,34 @@ body {
 }
 
 input[type="text"] {
-    font-size: large;
+    font-family: "Roboto", cursive;
+    text-align: center;
+    font-size: larger;
+    width: 450px;
+    height: 40px;
+    padding:  5px;
 }
 
 input[type="submit"] {
     font-size: large;
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
 }
 
 p {
     padding: 4px;
+}
+
+label {
+    font-family: "Fredoka One", cursive;
+    display: block;
+    font-size: large;
+    padding-bottom: 2px;
+}
+
+.error {
+    text-align: center;
+    font-size: larger;
 }

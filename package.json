@@ -1,0 +1,23 @@
+{
+  "name": "Weather",
+  "version": "1.0.0",
+  "description": "Fetch current weather",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avant-gardener/current-weather.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avant-gardener/current-weather/issues"
+  },
+  "homepage": "https://github.com/avant-gardener/current-weather#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
