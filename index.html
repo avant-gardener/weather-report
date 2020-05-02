@@ -12,19 +12,29 @@
 
 <body>
 
-    <form class="form">
-        <label for="city_name">Enter a city</label>
-        <input name="city" type="text" class="city_name" id="city_name" placeholder="City Name" autocomplete="off">
-        <input type="submit" value="Submit" class="button">
-    </form>
+    <header>
+        <h1 id="title">The Weather Report</h1>
+    </header>
 
-    <p class="error" hidden="True">City not found</p>
-    <div id="data" hidden="true">
-        <p class="Date">Date</p>
-        <p class="Location">Location</p>
-        <p class="Temperature">Temperature</p>
-        <p class="Weather">Weather</p>
-    </div>
+    <main>
+        <form class="form">
+            <label for="city_name">Enter a city</label>
+            <input name="city" type="text" class="city_name" id="city_name" placeholder="City Name" autocomplete="off">
+            <input type="submit" value="Submit" class="button">
+        </form>
+
+        <p class="error" hidden="true">City not found</p>
+        <div id="data" hidden="true">
+            <p class="Date">Date</p>
+            <p class="Location">Location</p>
+            <p class="Temperature">Temperature</p>
+            <p class="Weather">Weather</p>
+        </div>
+    </main>
+
+    <footer>
+        <h2 id="footer">Powered by openweathermap.org</h2>
+    </footer>
 
     <script src="app.js"></script>
 

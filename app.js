@@ -16,6 +16,7 @@ function get_coords(mycity) {
             try {
                 var lat = data["coord"]["lat"];
                 var lon = data["coord"]["lon"];
+                document.getElementsByClassName("Location")[0].textContent = mycity + ", " + data["sys"]["country"];
                 get_data(lat, lon);
             }
             catch (err) {
@@ -33,7 +34,7 @@ function get_data(lat, lon) {
         .then(data => {
             var d = new Date(data["current"]["dt"] * 1000);
             document.getElementsByClassName("Date")[0].textContent = d.toString();
-            document.getElementsByClassName("Location")[0].textContent = data["timezone"];
+            // document.getElementsByClassName("Location")[0].textContent = data["timezone"];
             document.getElementsByClassName("Temperature")[0].textContent = data["current"]["temp"] + " °C";
             document.getElementsByClassName("Weather")[0].textContent = data["current"]["weather"][0]["description"];
             document.getElementsByClassName("error")[0].hidden = true;
