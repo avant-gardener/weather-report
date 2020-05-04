@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/weather-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <title>Weather</title>
@@ -18,22 +19,27 @@
 
     <main>
         <form class="form">
-            <label for="city_name">Enter a city</label>
-            <input name="city" type="text" class="city_name" id="city_name" placeholder="City Name" autocomplete="off">
-            <input type="submit" value="Submit" class="button">
+            <label for="city_name">Enter a location</label>
+            <input name="city" type="text" class="city_name" id="city_name" placeholder="Location Name"
+                autocomplete="off">
         </form>
 
-        <p class="error" hidden="true">City not found</p>
-        <div id="data" hidden="true">
+        <p class="error" hidden="true">Location not found</p>
+        <section id="data" hidden="true">
             <p class="Date">Date</p>
             <p class="Location">Location</p>
             <p class="Temperature">Temperature</p>
             <p class="Weather">Weather</p>
-        </div>
+            <div class="icon">
+                <img class="wi wi-200">
+                <i id="icon" class="wi wi-200"></i>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <h2 id="footer">Powered by openweathermap.org</h2>
+        <h2 id="footer">Data from openweathermap.org</h2>
+        <h3 id="footer2">Icons from erikflowers</h3>
     </footer>
 
     <script src="app.js"></script>
