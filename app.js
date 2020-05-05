@@ -3,11 +3,10 @@ const form = document.querySelector(".form");
 form.addEventListener("submit", e => {
     e.preventDefault();
     const city_name = form.querySelector(".city_name");
-    console.log(city_name.value);
     get_coords(city_name.value);
 });
 
-// Get coordinates of city using weather api
+// Get coordinates of location using weather api and set location name
 function get_coords(mycity) {
     var api_city = "https://api.openweathermap.org/data/2.5/weather?q=" + mycity + "&appid=9290fa0eb808f9b5da74303e5d1d3d86";
     fetch(api_city)
@@ -26,7 +25,7 @@ function get_coords(mycity) {
         });
 }
 
-// Get full information using one call api
+// Get full information using one call api and set other data
 function get_data(lat, lon) {
     var api = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=metric&appid=9290fa0eb808f9b5da74303e5d1d3d86";
     fetch(api)
@@ -63,7 +62,6 @@ function change_icon(data) {
     loadJSON(function (response) {
         var weather_icons = JSON.parse(response);
         var icon = weather_icons[data["current"]["weather"][0]["id"]].icon;
-        console.log(data);
         var time_prefix;
         const date = new Date(data["current"]["dt"] * 1000);
         const sunrise = new Date(data["current"]["sunrise"] * 1000); //Convert a Unix timestamp to time
@@ -78,7 +76,6 @@ function change_icon(data) {
             }
         }
         var final_icon = prefix + time_prefix + icon;
-        console.log(final_icon);
         document.getElementById("icon").className = final_icon;
     });
 }
