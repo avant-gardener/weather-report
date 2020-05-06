@@ -15,11 +15,11 @@ function get_coords(mycity) {
             try {
                 var lat = data["coord"]["lat"];
                 var lon = data["coord"]["lon"];
-                document.getElementsByClassName("Location")[0].textContent = mycity + ", " + data["sys"]["country"];
+                document.getElementsByClassName("location-data")[0].textContent = mycity + ", " + data["sys"]["country"];
                 get_data(lat, lon);
             }
             catch (err) {
-                document.getElementById("data").hidden = true;
+                document.getElementById("content-container").hidden = true;
                 document.getElementsByClassName("error")[0].hidden = false;
             }
         });
@@ -34,10 +34,10 @@ function get_data(lat, lon) {
             // https://stackoverflow.com/questions/10087819/convert-date-to-another-timezone-in-javascript
             var d = new Date().toLocaleString("tr-TR", { timeZone: data["timezone"] });
             document.getElementsByClassName("Date")[0].textContent = d.toString();
-            document.getElementsByClassName("Temperature")[0].textContent = data["current"]["temp"] + " °C";
+            document.getElementsByClassName("temperature-data")[0].textContent = data["current"]["temp"] + " °C";
             document.getElementsByClassName("Weather")[0].textContent = data["current"]["weather"][0]["description"];
             document.getElementsByClassName("error")[0].hidden = true;
-            document.getElementById("data").hidden = false;
+            document.getElementById("content-container").hidden = false;
             change_icon(data);
         });
 }
