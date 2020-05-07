@@ -2,6 +2,8 @@ const form = document.querySelector(".form");
 
 form.addEventListener("submit", e => {
     e.preventDefault();
+    document.getElementById("city_name").blur();
+    form.blur;
     const city_name = form.querySelector(".city_name");
     get_coords(city_name.value);
 });
